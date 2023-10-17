@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #333;
+  color: hsl(200, 100%, 90%);
+}
+
+.navbar {
+  display:flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-color: #333;
+  color: whitesmoke;
+
+}
+
+.imgLogo {
+  position: absolute;
+  width:35px;
+  height:35px;
+  margin: 1.5rem ;
+  margin-right: 0
+}
+
+.title {
+  margin-left: 3rem;
+  padding: 2rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 23px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+
+
+
+.navbarLinks ul {
+  display: flex;
+  justify-content: flex-end;
+
+  right: 10px;
+
+}
+.navbarLinks li {
+  padding: 1rem;
+  list-style: none;
+}
+
+.navbarLinks li a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 1rem;
+  display: block;
+}
+
+.navbarLinks li:hover {
+  background-color: #555;
+}
+
+.toggleButton {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  color: white;
+}
+
+.toggleBar{
+  background-color: white;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+
+}
+
+@media (max-width: 600px) {
+  .toggleButton {
+    display:flex;
+  }
+  .navbarLinks {
+    display: none;
+    width: 100%;
+  }
+  .navbarLinks ul:nth-child(1){
+    border-top:  1px solid white;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbarLinks ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbarLinks li {
+    text-align: center;
+    border-top:  0.01rem solid #555;
+  }
+  .navbarLinks li a {
+    padding: .5rem 1rem;
+  }
+  .navbarLinks.active {
+    display: flex;
+  }
+}
+
+.header {
+  padding:  1.5rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b87830;
+}
+
+.header h1 {
+  color: rgb(236, 229, 229);
+  position: relative;
+}
+
+.linkBorder {
+  width: 0%;
+  height: 3px;
+  background-color: rgb(236, 229, 229);
+  background: linear-gradient(90deg, transparent, rgb(236, 229, 229));
+  transition: width 0.5s;
+  position: absolute;
+  top: 100%;
+  left:0;
+
+}
+.header:hover .linkBorder {
+  width: 100%;
+}
+
+.searchContainer {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem
+}
+
+
+.inputSearch {
+  margin-top:10px;
+  padding-left: 2rem;
+  width: 65%;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+
+  
+}
+
+.bookDetails {
+  width: 300px;
+  height: 350px;
+  border: 2px solid #b87830;
+  margin: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.bookDetails img {
+  width: 300px;
+  height: 350px;
+
+}
+
+.bookDetails h1 {
+  text-align: center;
+  background-color: #b87830;
+  color: rgb(236, 229, 229);
+}
+
+.modalFrame {
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  background-color: #241f1f;
+  opacity: 0.94;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  background-color: #b87830;
+  border-radius: 12px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.modalContainer h1, h2, p {
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.modalContainer button {
+  width: 220px;
+  height: 35px;
+  margin: 10px;
+  border:none;
+  background-color: #333;
+  color: white;
+  border-radius:  8px;
+  cursor: pointer;
+
+}
+
+
+.about {
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.titleAbout {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 2rem;
+  letter-spacing: 0.25rem;
+}
+
+.titleAbout b {
+  color: #dd943f;
+}
+.contentAbout {
+  text-align: center;
+  font-size: larger;
+  margin-left:300px;
+  margin-right:300px;
+
+}
+
+.contact {
+  text-align: center;
+  font-size: large;
+  padding: 2rem;
+  margin-top:10rem
+}
+.contactTitle {
+  color: #dd943f;;
+}
+
+.contactTitle:hover {
+  color: whitesmoke;
+}
+
+
+.contactInfo {
+  text-align: center;
+  word-spacing: 0.5rem;
+  padding: 1rem;
+}
+
+.rights {
+  margin-top: 1rem;
+  text-decoration:underline;
+  color: #dd943f;
+}
+
+.rights:hover {
+  margin-top: 1rem;
+  text-decoration:underline;
+  color: whitesmoke;
+}
